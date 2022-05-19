@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 30px;
+            font-size: 17px;
+            padding: 8px;
+        }
+        .allBody{
+            background-color: #f2f2f2;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid lightgray;
+            border-radius: 4px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        fieldset,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid bisque;
+            border-radius: 5px;
+
+        }
+    
+        .pp{
+            text-align: center;
+            color: palevioletred
+        }
+
+        input[type="submit"]{
+            background-color: #4ae;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            padding: 10px;
+        }
+        input[type="submit"]:hover{
+            background-color: coral;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="allBody">
+    <form>
+        <h1 class="pp">User information</h1>
+        <p>Name: * <input type="text" name="name" placeholder="type name" required> </p>
+        <hr> 
+        <!-- fieldset for box -->
+        <fieldset>
+            <legend>Gender *</legend> 
+            <input type="radio" value="male" name="Gender" id="102" required>Male <input type="radio" value="female" name="Gender" id="103" required>Female 
+        </fieldset>
+        <hr>
+        <!-- textarea for lines to show more space -->
+        <p>address: <textarea name="address" id="address" cols="100" rows="2"></textarea></p>
+        <hr>
+        <p>Email : * <input type="text" class="email" required></p>
+        <hr>
+        <p>Pincode : *<input type="text" class="number" name="pincode" required></p>
+        <h2>Payment information</h2>
+        <p>Card type: *
+            <select name="card_type" id="card_type" required>
+                <option value="">--Select a card type--</option>
+                <option value="visa">visa</option>
+                <option value="rupay">rupay</option>
+                <option value="mastercard">mastercard</option>
+            </select>
+        </p>
+        <p>Card number : *
+            <input type="text" class="number" required>
+        </p>
+        <p>Expiration Date : *
+            <input type="date" class="exp_date" required>
+        </p>
+        <p>cvv : * <input type="password" name="cvv" id="cvv" required> </p>
+        <p><input type="submit" value="Pay Now"></p>
+    </form>   
+</div> 
+</body>
+</html>
